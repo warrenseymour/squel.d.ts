@@ -63,7 +63,7 @@ interface  SqlUpdate {
 }
 
 interface SqlDelete {
-  trget(table: string): SqlDelete
+  target(table: string): SqlDelete
   from(table: string, alias?: string): SqlDelete
   join(name: string, alias?: string, condition?: string): SqlDelete
   left_join(name: string, alias?: string, condition?: string): SqlDelete
@@ -106,6 +106,7 @@ interface QueryBuilder {
   delete(options?: QueryBuilderOptions, blocks?: Object[]): SqlDelete
   remove(options?: QueryBuilderOptions, blocks?: Object[]): SqlDelete
   expr(): Expression
+  str(expr: string): any
 }
 
 interface Expression {
