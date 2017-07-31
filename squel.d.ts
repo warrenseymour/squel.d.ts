@@ -106,6 +106,7 @@ interface QueryBuilder {
   delete(options?: QueryBuilderOptions, blocks?: Object[]): SqlDelete
   remove(options?: QueryBuilderOptions, blocks?: Object[]): SqlDelete
   expr(): Expression
+  str(expr: string): any
 }
 
 interface Expression {
